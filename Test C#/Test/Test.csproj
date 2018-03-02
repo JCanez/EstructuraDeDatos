@@ -47,12 +47,6 @@
     <Compile Include="Listas\Class\Cola.cs" />
     <Compile Include="Listas\Class\Generica.cs" />
     <Compile Include="Listas\Class\Pila.cs" />
-    <Compile Include="Listas\Forms\Genericas_Otros_Movimientos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Listas\Forms\Genericas_Otros_Movimientos.Designer.cs">
-      <DependentUpon>Genericas_Otros_Movimientos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Listas\Forms\Listas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,9 +61,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Listas\Forms\Genericas_Otros_Movimientos.resx">
-      <DependentUpon>Genericas_Otros_Movimientos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Listas\Forms\Listas.resx">
       <DependentUpon>Listas.cs</DependentUpon>
     </EmbeddedResource>

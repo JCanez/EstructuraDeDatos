@@ -58,50 +58,6 @@ namespace Test.Listas.Class
             }
         }
 
-        public void Insertar_Primera_Posicion(int x)
-        {
-            Nodo nuevo = new Nodo();
-            nuevo.info = x;
-
-            if (Cantidad() > 0)
-            {
-                nuevo.sig = raiz;
-                raiz = nuevo;
-            }
-            else
-            {
-                raiz = nuevo;
-                nuevo.sig = null;
-            }
-        }
-
-        public bool Insertar_Segunda_Posicion(int x)
-        {
-            Nodo nuevo = new Nodo();
-            nuevo.info = x;
-
-            if(Cantidad() > 0)
-            {
-                nuevo.sig = raiz.sig;
-                raiz.sig = nuevo;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public void Insertar_Antepenultima_Posicion(int x)
-        {
-
-        }
-
-        public void Insertar_Ultima_Posicion(int x)
-        {
-
-        }
-
         public int Extraer(int pos)
         {
             if (pos <= Cantidad())
@@ -148,26 +104,6 @@ namespace Test.Listas.Class
                     reco.sig = prox.sig;
                 }
             }
-        }
-
-        public void Borrar_Primera_Posicion()
-        {
-
-        }
-
-        public void Borrar_Segunda_Posicion()
-        {
-
-        }
-
-        public void Borrar_Ultima_Posicion()
-        {
-
-        }
-
-        public void Borrar_Nodo_Mayor()
-        {
-
         }
 
         public void Intercambiar(int pos1, int pos2)
@@ -259,7 +195,7 @@ namespace Test.Listas.Class
             return false;
         }
 
-        public bool Vacia()
+        public  bool Vacia()
         {
             if (raiz == null)
                 return true;
@@ -290,7 +226,5 @@ namespace Test.Listas.Class
             }
             return cant;
         }
-
-
     }
 }

@@ -164,8 +164,6 @@ namespace Test.Listas.Forms
                 intercambiar = false;
             }
         }
-
-
         #endregion
     }
 }
