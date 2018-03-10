@@ -94,12 +94,42 @@ namespace Test.Listas.Class
 
         public void Insertar_Antepenultima_Posicion(int x)
         {
+            Nodo nuevo = new Nodo();
+            nuevo.info = x;
 
+            int posActual = 1;
+            int cantNodos = Cantidad();
+
+            Nodo reco = raiz;
+
+            while(posActual < cantNodos - 1)
+            {
+                posActual++;
+                reco = reco.sig;
+            }
+
+            Nodo temp = reco.sig;
+
+            reco.sig = nuevo;
+            nuevo.sig = temp;
+
+            Nodo a = raiz;
         }
 
         public void Insertar_Ultima_Posicion(int x)
         {
+            Nodo nuevo = new Nodo();
+            nuevo.info = x;
 
+            Nodo reco = raiz;
+
+            while (reco.sig != null)
+            {
+                reco = reco.sig;
+            }
+
+            reco.sig = nuevo;
+            nuevo.sig = null;
         }
 
         public int Extraer(int pos)
@@ -152,22 +182,59 @@ namespace Test.Listas.Class
 
         public void Borrar_Primera_Posicion()
         {
-
+            Nodo refe = raiz.sig;
+            raiz = null;
+            raiz = refe;
         }
 
         public void Borrar_Segunda_Posicion()
         {
+            if(Cantidad() >= 2)
+            {
+                Nodo refe = raiz.sig;
 
+                raiz.sig = refe.sig;
+                refe.sig = null;
+            }
         }
 
         public void Borrar_Ultima_Posicion()
         {
+            Nodo reco = raiz;
+            Nodo anterior = null;
 
+            while(reco.sig != null)
+            {
+                anterior = reco;
+                reco = reco.sig;
+            }
+
+            anterior.sig = null;
         }
 
         public void Borrar_Nodo_Mayor()
         {
+            Nodo mayor = null;
+            Nodo anterior = null;
+            Nodo anterior_mayor = null;
 
+            Nodo reco = raiz;
+
+            int valor_mayor = raiz.info;
+
+            while (reco.sig != null)
+            {
+                if (reco.info > valor_mayor)
+                {
+                    anterior_mayor = anterior;
+                    mayor = reco;
+                }
+
+                anterior = reco;
+                reco = reco.sig;
+            }
+
+            anterior_mayor.sig = mayor.sig;
         }
 
         public void Intercambiar(int pos1, int pos2)
@@ -228,6 +295,26 @@ namespace Test.Listas.Class
             }
             else
                 return int.MaxValue;
+        }
+
+        public void Ordenar_Mayor_Menor()
+        {
+            Nodo temp = raiz;
+            int valor = temp.info;
+
+            while (temp.sig != null)
+            {
+                if (valor > temp.info)
+                {
+
+                }
+
+                temp = temp.sig;
+            }
+        }
+
+        public void Ordenar_Menor_Mayor()
+        {
         }
 
         public bool Ordenada()

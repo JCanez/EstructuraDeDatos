@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Listas\Class\Cola.cs" />
+    <Compile Include="Listas\Class\Dobles.cs" />
     <Compile Include="Listas\Class\Generica.cs" />
     <Compile Include="Listas\Class\Pila.cs" />
     <Compile Include="Listas\Forms\Genericas_Otros_Movimientos.cs">
@@ -53,11 +54,17 @@
     <Compile Include="Listas\Forms\Genericas_Otros_Movimientos.Designer.cs">
       <DependentUpon>Genericas_Otros_Movimientos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Listas\Forms\Listas.cs">
+    <Compile Include="Listas\Forms\Listas_Dobles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listas\Forms\Listas.Designer.cs">
-      <DependentUpon>Listas.cs</DependentUpon>
+    <Compile Include="Listas\Forms\Listas_Dobles.Designer.cs">
+      <DependentUpon>Listas_Dobles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listas\Forms\Listas_Simples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listas\Forms\Listas_Simples.Designer.cs">
+      <DependentUpon>Listas_Simples.cs</DependentUpon>
     </Compile>
     <Compile Include="EstructurasDinamicas.cs">
       <SubType>Form</SubType>
@@ -70,8 +77,11 @@
     <EmbeddedResource Include="Listas\Forms\Genericas_Otros_Movimientos.resx">
       <DependentUpon>Genericas_Otros_Movimientos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listas\Forms\Listas.resx">
-      <DependentUpon>Listas.cs</DependentUpon>
+    <EmbeddedResource Include="Listas\Forms\Listas_Dobles.resx">
+      <DependentUpon>Listas_Dobles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listas\Forms\Listas_Simples.resx">
+      <DependentUpon>Listas_Simples.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstructurasDinamicas.resx">
       <DependentUpon>EstructurasDinamicas.cs</DependentUpon>
